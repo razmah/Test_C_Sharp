@@ -10,6 +10,19 @@
 
 Console.Clear();
 
+
+Console.Write("Введите набор символов через запятую: ");
+string inStringSimvol = Console.ReadLine() ?? "";
+string[] arraySimvol = GetArrayStringConsole(inStringSimvol);
+Console.WriteLine();
+Console.Write("Введенные символы: ");
+PrintArray(arraySimvol);
+Console.WriteLine();
+Console.Write("Введенные символы, длина которых меньше либо равно 3: ");
+PrintArray(GetArrayThreeSimvol(arraySimvol));
+Console.WriteLine();
+
+
 string[] GetArrayStringConsole (string consoleText)
 {
     string[] arrayText = new string[consoleText.Length];
